@@ -10,12 +10,18 @@ func UrutanDeploy(jumlahModul int, ketergantungan [][]int) []int {
 		}
 		return result
 	}
-	
+	status := make([]int, jumlahModul)
+	dependencies := [][]int{}
+	fmt.Println(status)
+	for i := 0; i < jumlahModul; i++ {
+		
+	}
+	fmt.Println(dependencies)
 	return result
 }
 
 func main() {
-	jumlahModul := 3
-	ketergantungan := [][]int{}
+	jumlahModul := 4
+	ketergantungan := [][]int{{1, 0}, {2, 0}, {3, 1}, {3, 2}}
 	fmt.Println(UrutanDeploy(jumlahModul, ketergantungan))
 }
